@@ -14,21 +14,34 @@
 <link rel="stylesheet" href="../css/main.css" type="text/css"
 	media="screen">
 
+<script>
+	function popUp(url, width, height) {
+		var left = 0;
+		var top = 0;
+		if (window.innerWidth) {
+			var left = (window.innerWidth - width) / 2;
+			var top = (window.innerHeight - height) / 2;
+		} else {
+			left = (document.body.clientWidth - width) / 2;
+			top = (document.body.clientHeight - height) / 2;
+		}
+		// 			var myWindow = 
+		window.open(url, "_blank", "top=" + top + ",left=" + left + ",width="
+				+ width + ",height=" + height + ","
+				+ "toolbar=no, scrollbars=yes, resizable=yes");
+		// 	myWindow.document
+		// 	.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
+	}
+</script>
 
 <script type="../js/method.js"></script>
-<!--[if lt IE 9]>
 
+<!-- [if lt IE 9]> -->
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+<!-- <![endif] -->
 </head>
 
 <body>
-<!--  	<p> -->
-<!-- 	<a href="logIn.html" onclick="window.open(this.href);"  return false;> Test Banal </a> -->
-<!-- </p> -->
-	<a href="logIn.html"
-		onclick="PopupCentrer(this.href, 'LogIn Felxio', 300, 200, "toolbar=no, menubar=no, location=no, resizable=yes")
-		target="popup">Mon titre</a>	
 
 	<div id="page-body">
 		<div id="header">
@@ -36,17 +49,22 @@
 		</div>
 
 		<div id="head">
-			<div id="logIn" style="position: absolute; left: 970px; top: 20px;">
-				<!-- 				<a href="#" onClick="pop()"> -->
-				<a href="#null" onclick="javascript:open_infos();" target="popup"> <img
-					src="../images/img0001.gif" id="Shape1"
-					style="border-width: 0; width: 80px; height: 25px;">
+			<div id="logIn" style="position: absolute; left: 910px; top: 28px;">
+				<a href="#null" onclick="popUp('logIn.html',195,150)"><img
+					src="../images/img0002.png" id="TextArt1" alt="Log In"
+					title="Log In" style="border-width: 0; width: 50px; height: 15px;">
 				</a>
 			</div>
-			<div id="signUp" style="position: absolute; left: 910px; top: 28px;">
-				<img src="../images/img0003.gif" id="TextArt1" alt="Log In"
-					title="Log In" style="border-width: 0; width: 50px; height: 15px;">
+			<div id="signUp" style="position: absolute; left: 970px; top: 20px;">
+				<!-- 				<a href="#" onClick="pop()"> -->
+				<a href="#null" onclick="popUp('signUp.html', 295, 220)"><img
+					src="../images/img0001.gif" id="Shape1"
+					style="border-width: 0; width: 80px; height: 25px;"> </a>
 			</div>
+			<button onclick="popUp('logIn.html',195,150)"
+				style="position: absolute; left: 910px; top: 50px;">logIn</button>
+			<button onclick="popUp('signUp.html', 295, 220)"
+				style="position: absolute; left: 970px; top: 50px; width: 80px">signIn</button>
 		</div>
 
 		<div id="menu">

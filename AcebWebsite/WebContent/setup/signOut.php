@@ -1,12 +1,7 @@
-<?php 	include 'setup.php'; ?>
-
 <?php
-// $database = './usersdb.php';
-// $success_page = '';
-// $error_message = "";
-
-
-
+$database = './usersdb.php';
+$success_page = '';
+$error_message = "";
 if (!file_exists($database))
 {
    die('User database not found!');
@@ -14,12 +9,12 @@ if (!file_exists($database))
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'signupform')
 {
-//    $newusername = $_POST['username'];
-//    $newemail = $_POST['email'];
-//    $newpassword = $_POST['password'];
-//    $confirmpassword = $_POST['confirmpassword'];
-//    $newfullname = $_POST['fullname'];
-//    $code = 'NA';
+   $newusername = $_POST['username'];
+   $newemail = $_POST['email'];
+   $newpassword = $_POST['password'];
+   $confirmpassword = $_POST['confirmpassword'];
+   $newfullname = $_POST['fullname'];
+   $code = 'NA';
    if ($newpassword != $confirmpassword)
    {
       $error_message = 'Password and Confirm Password are not the same!';

@@ -1,4 +1,4 @@
-<?php 	include '../setup/logIn.php'; ?>
+<?php 	include '../setup/signUp.php'; ?>
 
 <!doctype html>
 <html lang="en">
@@ -198,46 +198,59 @@ a:hover {
 
 <body>
 
-	<div id="wb_Login1" align="center"
-		style="height: 130px; text-align: right; z-index: 0;">
 
-		<form name="loginform" method="post"
-			action="<?php echo basename(__FILE__); ?>" id="loginform">
-			<input type="hidden" name="form_name" value="loginform">
-
-			<table class="loginform_table" style="height: 130px;">
+	<div id="wb_Signup1" align="center"
+		style="position: absolute; width: 275px; height: 202px; text-align: right; z-index: 4;">
+		<form name="signupform" method="post"
+			action="<?php echo basename(__FILE__); ?>" id="signupform">
+			<input type="hidden" name="form_name" value="signupform">
+			<table class="signupform_table" style="width: 275px; height: 202px;">
 				<tr>
-					<td class="loginform_header" colspan="2" style="height: 20px;">Log
-						In</td>
+					<td class="signupform_header" colspan="2" style="height: 20px;">Sign
+						up for a new account</td>
 				</tr>
 				<tr>
-					<td style="height: 20px;">User Name:</td>
-					<!-- value="<?php echo $username; ?>"  -->
-					<td style="text-align: left"><input class="loginform_text"
+					<td style="height: 20px">Full Name:</td>
+					<td style="text-align: left"><input class="signupform_text"
+						name="fullname" type="text" id="fullname"
+						style="width: 150px; height: 18px;"></td>
+				</tr>
+				<tr>
+					<td style="height: 20px">User Name:</td>
+					<td style="text-align: left"><input class="signupform_text"
 						name="username" type="text" id="username"
-						style="width: 100px; height: 18px;"></td>
+						style="width: 150px; height: 18px;"></td>
 				</tr>
 				<tr>
-					<td style="height: 20px">Password:</td>
-					<!-- value="<?php echo $password; ?>"  -->
-					<td style="text-align: left"><input class="loginform_text"
+					<td style="height: 20px;">Password:</td>
+					<td style="text-align: left"><input class="signupform_text"
 						name="password" type="password" id="password"
-						style="width: 100px; height: 18px;"></td>
+						style="width: 150px; height: 18px;"></td>
 				</tr>
 				<tr>
-					<td>&nbsp;</td>
-					<td style="text-align: left; height: 20px"><input
-						id="rememberme" type="checkbox" name="rememberme">Remember
-						me</td>
+					<td style="height: 20px">Confirm Password:</td>
+					<td style="text-align: left"><input class="signupform_text"
+						name="confirmpassword" type="password" id="confirmpassword"
+						style="width: 150px; height: 18px;"></td>
+				</tr>
+				<tr>
+					<td style="height: 20px">E-mail:</td>
+					<td style="text-align: left"><input class="signupform_text"
+						name="email" type="text" id="email"
+						style="width: 150px; height: 18px;"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<?php echo $error_message; ?>
+					</td>
 				</tr>
 				<tr>
 					<td>&nbsp;</td>
 					<td style="text-align: left; vertical-align: bottom"><input
-						class="loginform_button" type="submit" name="login" value="Log In"
-						id="login" style="width: 70px; height: 20px;"></td>
+						class="signupform_button" type="submit" name="signup"
+						value="Create User" id="signup" style="width: 90px; height: 20px;"></td>
 				</tr>
 			</table>
-
 		</form>
 	</div>
 

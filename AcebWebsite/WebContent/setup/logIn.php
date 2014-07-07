@@ -1,12 +1,14 @@
+<?php 	include 'setup.php'; ?>
+
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'loginform')
 {
-   $success_page = '';
-   $error_page = basename(__FILE__);
-   $database = './usersdb.php';
-   $crypt_pass = md5($_POST['password']);
-   $found = false;
-   $fullname = '';
+//    $success_page = '';
+//    $error_page = basename(__FILE__);
+//    $database = './usersdb.php';
+//    $crypt_pass = md5($_POST['password']);
+//    $found = false;
+//    $fullname = '';
 
    if(filesize($database) > 0)
    {
