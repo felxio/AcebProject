@@ -1,0 +1,245 @@
+<?php 	include '../setup/logIn.php'; ?>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<style type="text/css">
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+}
+</style>
+<style type="text/css">
+a
+{
+   color: #C8D7EB;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #C8D7EB;
+}
+a:active
+{
+   color: #C8D7EB;
+}
+a:hover
+{
+   color: #376BAD;
+   text-decoration: underline;
+}
+</style>
+<style type="text/css">
+.loginform_table
+{
+   background-color: #EDF2F8;
+   border-color:#BBCEE6;
+   border-width:1px;
+   border-style: solid;
+   color: #376BAD;
+   border-spacing: 4px;
+   font-family: Arial;
+   font-size: 13px;
+   text-align: right;
+}
+.loginform_header
+{
+   background-color: #BBCEE6;
+   color: #376BAD;
+   text-align: center;
+}
+.loginform_text
+{
+   background-color: #FFFFFF;
+   border-color: #BBCEE6;
+   border-width: 1px;
+   border-style: solid;
+   color: #376BAD;
+   font-family: Arial;
+   font-size: 13px;
+}
+.loginform_button
+{
+   background-color: #FFFFFF;
+   border-color: #BBCEE6;
+   border-width: 1px;
+   border-style: solid;
+   color: #376BAD;
+   font-family: Arial;
+   font-size: 13px;
+}
+.logoutform_button
+{
+   background-color: #EDF2F8;
+   border-color: #BBCEE6;
+   border-width: 1px;
+   border-style: solid;
+   color: #376BAD;
+   font-family: Arial;
+   font-size: 13px;
+}
+.forgotpasswordform_table
+{
+   background-color: #EDF2F8;
+   border-color:#BBCEE6;
+   border-width:1px;
+   border-style: solid;
+   color: #376BAD;
+   font-family: Arial;
+   font-size: 13px;
+   text-align: right;
+   border-spacing: 4px;
+}
+.forgotpasswordform_header
+{
+   background-color: #BBCEE6;
+   color: #376BAD;
+   text-align: center;
+}
+.forgotpasswordform_text
+{
+   background-color: #FFFFFF;
+   border-color: #BBCEE6;
+   border-width: 1px;
+   border-style: solid;
+   color: #376BAD;
+   font-family: Arial;
+   font-size: 13px;
+}
+.forgotpasswordform_button
+{
+   background-color: #FFFFFF;
+   border-color: #BBCEE6;
+   border-width: 1px;
+   border-style: solid;
+   color: #376BAD;
+   font-family: Arial;
+   font-size: 13px;
+}
+.changepasswordform_table
+{
+   background-color: #EDF2F8;
+   border-color:#BBCEE6;
+   border-width:1px;
+   border-style: solid;
+   color: #376BAD;
+   font-family: Arial;
+   font-size: 13px;
+   text-align: right;
+   border-spacing: 4px;
+}
+.changepasswordform_header
+{
+   background-color: #BBCEE6;
+   color: #376BAD;
+   text-align: center;
+}
+.changepasswordform_text
+{
+   background-color: #FFFFFF;
+   border-color: #BBCEE6;
+   border-width: 1px;
+   border-style: solid;
+   color: #376BAD;
+   font-family: Arial;
+   font-size: 13px;
+}
+.changepasswordform_button
+{
+   background-color: #FFFFFF;
+   border-color: #BBCEE6;
+   border-width: 1px;
+   border-style: solid;
+   color: #376BAD;
+   font-family: Arial;
+   font-size: 13px;
+}
+.signupform_table
+{
+   background-color: #EDF2F8;
+   border-color:#BBCEE6;
+   border-width:1px;
+   border-style: solid;
+   color: #376BAD;
+   font-family: Arial;
+   font-size: 13px;
+   text-align: right;
+   border-spacing: 4px;
+}
+.signupform_header
+{
+   background-color: #BBCEE6;
+   color: #376BAD;
+   text-align: center;
+}
+.signupform_text
+{
+   background-color: #FFFFFF;
+   border-color: #BBCEE6;
+   border-width: 1px;
+   border-style: solid;
+   color: #376BAD;
+   font-family: Arial;
+   font-size: 13px;
+}
+.signupform_button
+{
+   background-color: #FFFFFF;
+   border-color: #BBCEE6;
+   border-width: 1px;
+   border-style: solid;
+   color: #376BAD;
+   font-family: Arial;
+   font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Testons tout ça !!!! -->
+
+	<div id="wb_Login1"
+		style=" height: 130px; text-align: right; z-index: 0;">
+		<form name="loginform" method="post"
+			action="<?php echo basename(__FILE__); ?>" id="loginform">
+			<input type="hidden" name="form_name" value="loginform">
+			<table class="loginform_table" style=" height: 130px;">
+				<tr>
+					<td class="loginform_header" colspan="2" style="height: 20px;">Log
+						In</td>
+				</tr>
+				<tr>
+					<td style="height: 20px; ">User Name:</td>
+					<td style="text-align: left"><input class="loginform_text"
+						name="username" type="text" id="username"
+						value="<?php echo $username; ?>"
+						style="width: 100px; height: 18px;"></td>
+				</tr>
+				<tr>
+					<td style="height: 20px">Password:</td>
+					<td style="text-align: left"><input class="loginform_text"
+						name="password" type="password" id="password"
+						value="<?php echo $password; ?>"
+						style="width: 100px; height: 18px;"></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td style="text-align: left; height: 20px"><input
+						id="rememberme" type="checkbox" name="rememberme">Remember
+						me</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td style="text-align: left; vertical-align: bottom"><input
+						class="loginform_button" type="submit" name="login" value="Log In"
+						id="login" style="width: 70px; height: 20px;"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>

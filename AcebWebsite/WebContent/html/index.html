@@ -1,5 +1,5 @@
 <?php 	include '../setup/setup.php'; ?>
- 
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,8 +11,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <link rel="stylesheet" href="../css/styles.css?v=1.0">
-<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../css/main.css" type="text/css"
+	media="screen">
 
+
+<script type="../js/method.js"></script>
 <!--[if lt IE 9]>
 
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,9 +23,30 @@
 </head>
 
 <body>
+<!--  	<p> -->
+<!-- 	<a href="logIn.html" onclick="window.open(this.href);"  return false;> Test Banal </a> -->
+<!-- </p> -->
+	<a href="logIn.html"
+		onclick="PopupCentrer(this.href, 'LogIn Felxio', 300, 200, "toolbar=no, menubar=no, location=no, resizable=yes")
+		target="popup">Mon titre</a>	
+
 	<div id="page-body">
 		<div id="header">
 			<div id="logo"></div>
+		</div>
+
+		<div id="head">
+			<div id="logIn" style="position: absolute; left: 970px; top: 20px;">
+				<!-- 				<a href="#" onClick="pop()"> -->
+				<a href="#null" onclick="javascript:open_infos();" target="popup"> <img
+					src="../images/img0001.gif" id="Shape1"
+					style="border-width: 0; width: 80px; height: 25px;">
+				</a>
+			</div>
+			<div id="signUp" style="position: absolute; left: 910px; top: 28px;">
+				<img src="../images/img0003.gif" id="TextArt1" alt="Log In"
+					title="Log In" style="border-width: 0; width: 50px; height: 15px;">
+			</div>
 		</div>
 
 		<div id="menu">
@@ -74,11 +98,10 @@
 							</span>
 						</marquee>
 
-<!-- 						 style="position: relative; top: 25px;" -->
+						<!-- 						 style="position: relative; top: 25px;" -->
 						<div id="wb_Image3" style="margin-top: 10px; margin-bottom: 15px;">
 							<a href="https://particuliers.societegenerale.fr/"
-								target="_blank"><img
-								src="../images/sg.jpg" id="Image3"
+								target="_blank"><img src="../images/sg.jpg" id="Image3"
 								alt="" border="0" style="width: 200px; height: 45px;"></a>
 						</div>
 						<div id="wb_Image4" style="margin-bottom: 15px;">
@@ -112,15 +135,8 @@
 								style="width: 200px; height: 30px;"></a>
 						</div>
 
-						<!-- 						<div class="part-image" > -->
-						<!-- 							<a href="http://www.brest.fr/" target="_blank"> -->
-						<!-- 								<img src="../images/brest.png" id="Image1" alt="" border="0" -->
-						<!-- 								style="width: 200px; height: 50px;"> -->
-						<!-- 							</a> -->
-						<!-- 						</div> -->
-						<!-- 						<a href="#" class="read-more">Read more...</a> -->
-
 					</div>
+
 
 					<!-- latest news-->
 					<div class="part">
@@ -137,7 +153,6 @@
 					</div>
 
 
-
 					<!-- useful links-->
 					<div class="part">
 						<h1>We will figure it out later</h1>
@@ -152,6 +167,7 @@
 						<a href="#" class="read-more">See more...</a>
 					</div>
 
+
 					<!-- latest events-->
 					<div class="part">
 						<h1>Events</h1>
@@ -165,7 +181,6 @@
 						</ul>
 						<a href="./events" class="read-more">See more...</a>
 					</div>
-
 
 
 				</div>
