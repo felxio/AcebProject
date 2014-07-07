@@ -1,0 +1,249 @@
+/*---------------------------------
+ * standard tag styles
+ *--------------------------------*/
+body{
+	background-image: url("../images/page-bg.png");
+	background-repeat: repeat-x;
+	font-family: Calibri, "Comic Sans MS", sans-serif,  Verdana, "Times New Romans";
+	font-weight: normal;
+	font-size: 15px;
+}
+
+h1 {
+	color: #1c7269;
+	font-weight: bold;
+	font-size: 18px;
+	/*float : left;*/
+	/*border: 1px solid RED;*/
+}
+
+/*======================================
+ *	architecture générale de la page
+ *=====================================*/
+#page-body {
+	width:1013px;
+	margin:0 auto;
+}
+
+#header {
+	width: 1013px;
+	height: 96px;
+	padding:5px 0 0 0;
+}
+
+#logo {
+	/*border: 1px solid RED;*/
+	width: 232px;
+	height: 96px;
+	background: url("../images/logo.png") no-repeat;
+	margin-left: 60px;
+}
+/*
+#conteneur{
+	border: 1px solid BLUE;
+	width: 1015px;
+	margin:0 auto;
+	
+}
+*/
+/*=========================
+ * gestion des menus(BARRE DES MENUS)
+ ==========================*/
+
+#menu {
+	/*border: 1px solid BLUE;*/
+	background: url("../images/menubar-bg.png") no-repeat;
+	width: 1012px;
+	height: 67px;
+    padding: 0;
+	margin: 0;
+} 
+
+#menu ul  {
+	/*border: 1px solid RED;*/
+	/*background:top;*/
+	float: left;
+	line-height: 0;
+	margin-top: -1px;
+	margin-left: 30px;
+}
+
+#menu ul li {  
+    display: inline;  
+    list-style: none; /* nécessaire pour IE7 */  
+	padding:0;
+}
+
+#menu ul li a {
+	width: 157px;
+	height: 42px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center; /* centrer le texte */
+	text-shadow: 5px 5px 5px #000;
+    display:inline-block;
+	line-height: 40px;
+    margin: 0 2px;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-family: Consolas;
+	background: no-repeat top left;
+	/*border-bottom: 2px #FFFFFF solid;*/
+	
+}
+
+#menu ul li a:hover{
+	text-decoration: underline;
+	text-shadow: 5px 5px 5px #FFF;
+	background-position: top left;
+}
+
+#menu ul li a.menu1 {
+	background: url("../images/menu-home11.png");
+}
+
+#menu ul li a.menu2 {
+	background-image: url("../images/menu22.png");
+}
+
+#menu ul li a.menu3 {
+	background-image: url("../images/menu33.png");
+}
+
+#menu ul li a.menu4 {
+	background-image: url("../images/menu44.png");
+}
+
+#menu ul li a.menu5 {
+	background-image: url("../images/menu55.png");
+}
+
+/*====================================
+ * espace de travail (WORKSPACE)
+ * ==================================*/
+
+#contenu {
+	/*height:430px;*/
+	background: url("../images/body-bg.png") no-repeat top left;
+	padding: 0 60px;
+	margin: 0;
+}
+
+#footer {
+	height:73px;
+	background: url("../images/footer-bg.png") no-repeat;
+	/*float: left;
+	position : relative;*/
+}
+
+/*===========================================
+ *	contenu de la page d'accueil
+ * ======================================== */
+#welcome-up {
+	/*border: 1px solid Red;*/
+	width: 877px;
+	height: 257px;
+	background: url("../images/welcome-up.png") no-repeat;
+	padding: 10px 10px 0 10px;
+	color: #1c7269;
+}
+
+#welcome-intro {
+	/*border: 1px solid GREEN;*/
+	height:231px;
+	width: 245px;
+	padding: 10px 10px 0 20px;
+	float:left;
+	text-align:left;
+}
+
+#welcome-slider {
+	/*border: 1px solid RED;*/
+	width: 530px;
+	height: 200px;
+	padding: 20px 20px 0 10px;
+	margin:7px 12px;
+/* 	background: url("../images/aceb.png") no-repeat; */
+	float : left;
+	text-align:justify;
+}
+
+#welcome-down {
+	/*border: 1px solid GREEN;*/
+	width: 877px;
+	/*height: 178px;*/
+	position: relative;
+	background: url("../images/welcome-down.png") repeat-y;
+}
+
+#welcome-down .content{
+	padding: 0 20px;
+}
+
+#welcome-down .content .part{
+	width: 250px;
+	height: 100%;
+	padding: 0 13px;
+	float : left;
+	/*border-bottom:1px solid GRAY;*/
+}
+#welcome-down .content .part:hover{
+	background-color : #FFFFFF;
+}
+
+#welcome-down .content .part:hover h1{
+	text-decoration : underline;
+}
+
+#welcome-down .content .part:hover a.read-more {
+	color : RED;
+	background : 1px solid #1c7269;
+}
+
+#welcome-down .content .part .part-image {
+	width:100px;
+	height:100px;
+	float: left;
+	/*background-color: #1c7269;*/
+	/*padding:0 5px 5px 0;*/
+	margin : 0 10px;
+	background: url("../images/brest.png") no-repeat center;
+	border:1px solid #1c7269;
+}
+
+#welcome-down .content .part ul {
+	font-weight : bold;
+	list-style: square;
+	color : #1c7269;
+	padding : 0 10px;
+}
+
+#welcome-down .content .part ul  li{
+	padding: 3px;
+}
+
+#welcome-down .content .part ul  li a{
+	text-decoration : none;
+}
+
+#welcome-down .content .part ul li a:hover{
+	text-decoration : underline;
+}
+
+/*--------------------------------*
+ *	class styles
+ *---------------------------------*/
+ a.read-more {
+	color: #1c7269;
+	font-weight: bold;
+	font-size: 15px;
+	font-style : none;
+	text-decoration : none;
+	display:block;
+	padding: 10px 10px;
+	/*background-color: #FFFFFF;*/
+	/*margin:1px;*/
+ }
+ a:hover.read-more{
+	text-decoration : underline;
+ }
