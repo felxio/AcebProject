@@ -1,4 +1,4 @@
-<?php 	include '../setup/signUp.php'; ?>
+<?php 	include '../php/signUp.php'; ?>
 
 <!doctype html>
 <html lang="en">
@@ -199,20 +199,26 @@ a:hover {
 <body>
 
 
-	<div id="wb_Signup1" align="center"
-		style="position: absolute; width: 275px; height: 202px; text-align: right; z-index: 4;">
-		<form name="signupform" method="post"
-			action="<?php echo basename(__FILE__); ?>" id="signupform">
+	<div id="wb_Signup1" 
+		style=" width: 275px; text-align: right; z-index: 4;">
+		<form name="signupform" method="post" action="../php/signUp.php"
+			id="signupform">
 			<input type="hidden" name="form_name" value="signupform">
-			<table class="signupform_table" style="width: 275px; height: 202px;">
+			<table class="signupform_table" style="width: 290px; height: 202px;">
 				<tr>
 					<td class="signupform_header" colspan="2" style="height: 20px;">Sign
 						up for a new account</td>
 				</tr>
 				<tr>
-					<td style="height: 20px">Full Name:</td>
+					<td style="height: 20px">Last Name:</td>
 					<td style="text-align: left"><input class="signupform_text"
-						name="fullname" type="text" id="fullname"
+						name="lastname" type="text" id="lastname"
+						style="width: 150px; height: 18px;"></td>
+				</tr>
+				<tr>
+					<td style="height: 20px">First Name:</td>
+					<td style="text-align: left"><input class="signupform_text"
+						name="firstname" type="text" id="firstname"
 						style="width: 150px; height: 18px;"></td>
 				</tr>
 				<tr>
@@ -237,6 +243,24 @@ a:hover {
 					<td style="height: 20px">E-mail:</td>
 					<td style="text-align: left"><input class="signupform_text"
 						name="email" type="text" id="email"
+						style="width: 150px; height: 18px;"></td>
+				</tr>
+				<tr>
+					<td style="height: 20px">Phone number:</td>
+					<td style="text-align: left"><input class="signupform_text"
+						name="phone_number" type="text" id="phone_number"
+						style="width: 150px; height: 18px;"></td>
+				</tr>
+				<tr>
+					<td style="height: 20px">Fonction:</td>
+					<td style="text-align: left"><input class="signupform_text"
+						name="fonction" type="text" id="fonction"
+						style="width: 150px; height: 18px;"></td>
+				</tr>
+				<tr>
+					<td style="height: 20px">Adresse:</td>
+					<td style="text-align: left"><input class="signupform_text"
+						name="address" type="text" id="address"
 						style="width: 150px; height: 18px;"></td>
 				</tr>
 				<tr>

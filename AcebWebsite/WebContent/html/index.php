@@ -1,4 +1,3 @@
-<?php 	include '../php/insert.php'; ?>
 
 <!DOCTYPE html>
 <html>
@@ -51,16 +50,9 @@
 <!-- <input type="submit"> -->
 <!-- </form> -->
 
-<div class="container">
-	<p> <?php 
 
-// while($row = mysqli_fetch_array($result)) {
-	echo $row['firstname'];
-// 	echo "<br>";
-// }
-
-?> </p>
-</div>
+<button onclick="popUp('insert.html',200,100)"
+ 				style="position: absolute; left: 10px; top: 10px;">Insert</button>
 
 
 
@@ -82,10 +74,10 @@
 					src="../images/img0001.gif" id="Shape1"
 					style="border-width: 0; width: 80px; height: 25px;"> </a>
 			</div>
-<!-- 			<button onclick="popUp('logIn.html',200,500)" -->
-<!-- 				style="position: absolute; left: 910px; top: 50px;">logIn</button> -->
-<!-- 			<button onclick="popUp('signUp.html', 310, 350)" -->
-<!-- 				style="position: absolute; left: 970px; top: 50px; width: 80px">signIn</button> -->
+<!--			<button onclick="popUp('logIn.html',200,500)" -->
+<!--  				style="position: absolute; left: 910px; top: 50px;">logIn</button> -->
+<!-- 		<button onclick="popUp('signUp.html', 310, 350)" -->
+<!--  				style="position: absolute; left: 970px; top: 50px; width: 80px">signIn</button> -->
 		</div>
 
 		<div id="menu">
@@ -102,11 +94,11 @@
 			<div id="welcome-up">
 				<div id="welcome-intro">
 					<h1>Introduction</h1>
-					Lâ€™ACEB est une association apolitique, Ã  but non lucrative
-					entiÃ¨rement dirigÃ©e par les Ã©tudiants et rÃ©cents diplÃ´mÃ©s
-					camerounais. Ses membres sont entiÃ¨rement intÃ©ressÃ©s par la
+					L’ACEB est une association apolitique, à but non lucrative
+					entièrement dirigée par les étudiants et récents diplômés
+					camerounais. Ses membres sont entièrement intéressés par la
 					promotion de la culture africaine en particulier Camerounaise, les
-					Ã©changes interculturelles, lâ€™intÃ©gration des africains en France et
+					échanges interculturelles, l’intégration des africains en France et
 					<a href="#" class="./about_us">Read more...</a>
 				</div>
 				<div id="welcome-slider">
