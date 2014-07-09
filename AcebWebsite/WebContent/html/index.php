@@ -1,3 +1,5 @@
+<?php 	include '../php/generalVar.php'; ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -17,11 +19,11 @@
 
 <script>
 	function popUp(url, width, height) {
-		var left = 0;
-		var top = 0;
+		var left = null;
+		var top = null;
 		if (window.innerWidth) {
-			var left = (window.innerWidth - width) / 2;
-			var top = (window.innerHeight - height) / 2;
+			left = (window.innerWidth - width) / 2;
+			top = (window.innerHeight - height) / 2;
 		} else {
 			left = (document.body.clientWidth - width) / 2;
 			top = (document.body.clientHeight - height) / 2;
@@ -29,7 +31,8 @@
 		// 			var myWindow = 
 		window.open(url, "_blank", "top=" + top + ",left=" + left + ",width="
 				+ width + ",height=" + height + ","
-				+ "toolbar=no, menubar=no, directories=no, status=no, location=no, fullscreen=no, scrollbars=yes, resizable=yes");
+				+ "scrollbars=yes, resizable=yes, toolbar=yes, menubar=yes, status=yes");
+		//, toolbar=yes, menubar=yes	, directories=no, status=yes, location=yes
 		// 	myWindow.document
 		// 	.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
 	}
@@ -45,17 +48,10 @@
 
 
 <body>
-<!-- <form action="../php/insert.php" method="post"> -->
-<!-- Firstname: <input type="text" name="firstname"> -->
-<!-- <input type="submit"> -->
-<!-- </form> -->
 
-
-<button onclick="popUp('insert.html',200,100)"
- 				style="position: absolute; left: 10px; top: 10px;">Insert</button>
-
-
-
+<!--  
+<button onclick="popUp('insert.php',200,100)"
+ 				style="position: absolute; left: 10px; top: 10px;">Insert</button> -->
 
 	<div id="page-body">
 		<div id="header">
@@ -64,19 +60,19 @@
 
 		<div id="head">
 			<div id="logIn" style="position: absolute; left: 910px; top: 28px;" align="center">
-				<a href="#null" onclick="popUp('logIn.html',190,200)"><img
+				<a href="#null" onclick="popUp('logIn.php',190,200)"><img
 					src="../images/img0002.png" id="TextArt1" alt="Log In"
 					title="Log In" style="border-width: 0; width: 50px; height: 15px;">
 				</a>
 			</div>
 			<div id="signUp" style="position: absolute; left: 970px; top: 20px;" align="center">
-				<a href="#null" onclick="popUp('signUp.html', 330, 390)"><img
+				<a href="#null" onclick="popUp('signUp.php', 330, 390)"><img
 					src="../images/img0001.gif" id="Shape1"
 					style="border-width: 0; width: 80px; height: 25px;"> </a>
 			</div>
-<!--			<button onclick="popUp('logIn.html',200,500)" -->
+<!--			<button onclick="popUp('logIn.php',200,500)" -->
 <!--  				style="position: absolute; left: 910px; top: 50px;">logIn</button> -->
-<!-- 		<button onclick="popUp('signUp.html', 310, 350)" -->
+<!-- 		<button onclick="popUp('signUp.php', 330, 390)" -->
 <!--  				style="position: absolute; left: 970px; top: 50px; width: 80px">signIn</button> -->
 		</div>
 
@@ -129,7 +125,6 @@
 							</span>
 						</marquee>
 
-												 style="position: relative; top: 25px;"
 						<div id="wb_Image3" style="margin-top: 10px; margin-bottom: 15px;">
 							<a href="https://particuliers.societegenerale.fr/"
 								target="_blank"><img src="../images/sg.jpg" id="Image3"
